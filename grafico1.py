@@ -9,6 +9,7 @@ from app import app
 from df import df
 
 
+
 main_config = {
     "hovermode": "x unified",
     "hoverlabel": {

@@ -2,6 +2,7 @@ import dash
 import pandas as pd
 import dash_bootstrap_components as dbc
 
+
 estilos = ["https://use.fontawesome.com/releases/v5.10.2/css/all.css", "https://fonts.googleapis.com/icon?family=Material+Icons", dbc.themes.MATERIA]
 
 

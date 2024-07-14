@@ -5,6 +5,8 @@ from dash import dcc,html,dash_table
 from df import df
 from app import app
 from dash.dependencies import Input, Output,State
+
+
 df_temp=df.copy()
 
 layout=dbc.Container([
