@@ -1,0 +1,115 @@
+.boton-popover {
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    width: 100%;
+    height: 2rem;
+    font-size: 11px;
+    margin-top: 1rem;
+    padding-top: 5px;
+    
+}
+
+.bton {
+    background-color: white;
+    border: none;
+    padding: 3%;
+    margin: 3%;
+
+
+}
+
+.fas.fa-user-alt {
+    color: black; /* Cambia "blue" al color deseado */
+    font-size: 15px;
+    
+}
+
+.fas.fa-cog {
+    color: rgb(9, 8, 8); /* Cambia "red" al color deseado */
+    font-size: 15px;
+    
+}
+
+.fas.fa-bell {
+    color: rgb(3, 3, 3); /* Cambia "yellow" al color deseado */
+    font-size: 15px;
+}
+
+/*grafico1 card */
+
+.card1 {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+   
+    width: 60px;
+    height: 70px;
+    z-index: 1020;  /* Siempre por encima del sidebar */
+    border-radius: 10px;
+    background-color: black;
+}
+.fas.fa-comments-dollar {
+    font-size: 45px;
+    color: rgb(242, 233, 233);
+    margin: auto;
+}
+.card2 {
+    box-shadow: 0 4px 8px 0 rgba(2, 2, 2, 0.656);
+    border-radius: 15px;
+    width: 239px;
+    height: 90%;
+    top: -50px;
+    right: 7px;
+   
+}
+.fas.fa-balance-scale-right{
+    font-size: 45px;
+    color: rgb(242, 233, 233);
+    margin: auto;
+}
+.fas.fa-chart-pie{
+    font-size: 45px;
+    color: rgb(242, 233, 233);
+    margin: auto;
+}
+.fas.fa-coins{
+    font-size: 45px;
+    color: rgb(242, 233, 233);
+    margin: auto;
+}
+.titulo1{
+    color: rgb(19, 3, 3);
+    font-size: 15px;
+    padding-left: 110px;
+    padding-top: 14px;
+}
+.titulo2{
+    color: rgb(19, 3, 3);
+    font-size: 28px;
+    padding-left: 5rem;
+}
+/* grafico de barras */
+
+.barra1 {
+    width: 110%;
+    height: 250px;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-top: -405px;
+    margin-left: 9px;
+  
+   
+}
+
+.tarjeta {
+    width: 115%;
+    height: 390px;
+    margin-top: 35px;
+    box-shadow: 0 4px 8px 0 rgba(2, 2, 2, 0.656);
+    border-radius: 15px;
+    
+  
+   
+}
+
+
+

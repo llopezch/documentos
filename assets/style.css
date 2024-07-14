@@ -1,0 +1,123 @@
+.contenido-total{
+    display: flex;
+    flex-direction: column;
+}
+
+.lateral{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 5rem;
+    padding: 2rem 1rem;
+    background-color: #171515;
+    z-index: 1050;  /* Asegurarse de que esté por debajo del botón */
+    transition: width 0.1s ease-in-out;
+}
+/* Cuando el usuario pasa el cursor sobre el sidebar, expándelo */
+.lateral:hover {
+    width: 16rem;
+}
+
+/* Asegúrate de que el contenido de los enlaces de navegación no se divida cuando la barra de navegación colapse */
+.lateral .nav-link {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+/* Ajusta el ancho de los íconos */
+.lateral .nav-link i {
+    width: 2rem;
+    height: 2rem;
+}
+
+/* Oculta las etiquetas de los enlaces de navegación por defecto */
+.lateral .nav-link span {
+    visibility: hidden;
+    
+    transition: opacity 0.1s ease-in-out;
+}
+/* Cuando se pasa el cursor sobre el sidebar, muestra las etiquetas */
+.lateral:hover .nav-link span {
+    visibility: visible;
+    
+}
+#lateral h2 {
+    visibility: hidden;
+    color: #fff;
+    transition: opacity 0.1s ease-in-out;
+}
+
+#lateral:hover h2{
+    visibility: visible;
+    color: #fff;
+    
+}
+#lateral .dash-dropdown {
+    display: none;
+    
+    transition: opacity 0.1s ease-in-out;
+}
+
+#lateral:hover .dash-dropdown{
+    display: block;
+    
+
+}
+.fas {
+    font-size: 20px; /* Aplica este tamaño a todos los iconos de Font Awesome en toda la aplicación */
+    color: #fff;
+}
+/* Posiciona el contenido relativo al sidebar colapsado */
+.content {
+    margin-left: 7rem;
+    margin-right: 2rem;
+    padding: 2rem 1rem;
+}
+/* Estilo para el botón del menú en dispositivos móviles */
+.menu-button {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1100;  /* Siempre por encima del sidebar */
+    background-color: #000;  /* Fondo negro */
+    color: #fff;  /* Color de las líneas */
+    border: 2px solid #fff;
+    display: none;  /* Oculto por defecto, se mostrará solo en pantallas pequeñas */
+    padding: 0.5rem;  /* Reduce el padding */
+    font-size: 2px;  /* Tamaño de la fuente más pequeño */
+    width: 2.5rem;  /* Ancho del botón */
+    height: 2.5rem;  /* Altura del botón */
+    border-radius: 50%;  /* Botón redondo */
+}
+
+/* Ocultar sidebar y mostrar el botón del menú en pantallas pequeñas */
+@media (max-width: 768px) {
+    .lateral {
+        display: none;
+    }
+    .lateral.collapsed {
+        display: block;
+        width: 17rem;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 1050;
+        background-color: #171515;
+    }
+    .menu-button {
+        display: inline-block;
+    }
+    .content {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .lateral.collapsed .nav-link span {
+        visibility: visible;  /* Muestra las etiquetas de los enlaces de navegación */
+        opacity: 1;
+    }
+    #lateral.collapsed h2 {
+        visibility: visible   /* Asegura que todos los h2 dentro de .lateral sean visibles */
+    }
+}
