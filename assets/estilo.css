@@ -110,6 +110,13 @@
  
    
 }
-
+.boton-opcion{
+  
+    border-radius: 15px;
+    font-size: 12px;
+    left: 110px;
+    padding: 13px;
+    
+}
 
 

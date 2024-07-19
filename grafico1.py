@@ -7,7 +7,7 @@ from dash.exceptions import PreventUpdate
 import plotly.graph_objects as go
 from app import app
 from df import df
-
+import graph1,graph2,graph3
 
 
 main_config = {
@@ -232,9 +232,20 @@ layout=dbc.Container([
                 dbc.Col([
                     dbc.Row([
                         dbc.Col([
-                            dcc.Graph(id="grafico4")
-                        ],md=12,xs=12, sm=12)
-                    ])
+                            dbc.Nav([
+                                dbc.NavLink("Ventas", id="bt10", href="./bt10", n_clicks=0),
+                                dbc.NavLink("Productos", id="bt20", href="./bt20", n_clicks=0),
+                                dbc.NavLink("Clientes", id="bt30", href="./bt30", n_clicks=0),
+                            ],pills=True)
+                        
+                                
+                        ],md=12,xs=12, sm=12),   
+                    ]),
+                    
+                    html.Div(id="contenido_pagina"
+                      
+                    )  
+                 
                 ],lg=5)
             ])
 
@@ -354,6 +365,32 @@ def update_output(n1,n2,n3):
 
 
     return total_ventas,total_utilidad,total_costo,total_descuento,fig_ventas,fig_utilidad,fig_costo,agrupar_tabla.to_dict('records')
+
+
+@app.callback(
+            Output("contenido_pagina","children"),
+            Input("url","pathname")
+   
+)
+
+def actualizar_nav(path):
+    if path == '/grafico1/bt10':
+        return graph1.layout
+    elif path== '/grafico1/bt20':
+        return graph2.layout
+    elif path== '/grafico1/bt30':
+         return graph3.layout
+    else:
+        return graph1.layout
+
+
+        
+
+        
+
+
+
+
 
     
  
